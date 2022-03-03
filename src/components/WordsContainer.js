@@ -11,7 +11,8 @@ const WordsContainer = ({ words }) => {
       word={word.guess}
       avgCorrect={word['avg_correct']}
       avgPresent={word['avg_present']}
-      avg_absent={word['avg_absent']}
+      avgAbsent={word['avg_absent']}
+      avgTileScore={word['avg_tile_score']}
       isBookmarked={word.isBookmarked}
     />
   })
