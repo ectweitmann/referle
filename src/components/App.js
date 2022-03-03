@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import '../styles/App.css';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      words: [],
-      error: ''
-    }
-  }
+const App = () => {
 
-  render = () => {
-    return (
-      <h1>Hello world</h1>
+  return (
+    <div className="App">
+      <Header />
+      <Switch>
+        <Route exact path="/" render= { () => <Home /> } />
+        <Route exact path="/wordbank" render= { () => <WordBank /> } />
+        <Redirect to='/' />
+      </Switch>
+    </div>
     )
-  }
 }
 
 
