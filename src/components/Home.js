@@ -33,8 +33,7 @@ class Home extends Component {
   render = () => {
     return (
       <section className={"Home"}>
-        <h2>Home Page</h2>
-        {/* <WordsContainer words={this.state.words} /> */}
+        <WordsContainer words={this.state.words} />
         {/* <PageNav pages={this.state.pages} /> */}
       </section>
     );

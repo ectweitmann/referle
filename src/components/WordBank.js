@@ -33,8 +33,7 @@ class WordBank extends Component {
   render = () => {
     return (
       <section className={"WordBank"}>
-      <h2>Word Bank</h2>
-        {/* <WordsContainer words={this.state.words} /> */}
+        <WordsContainer words={this.state.words} />
         {/* <PageNav pages={this.state.pages} /> */}
       </section>
     );
