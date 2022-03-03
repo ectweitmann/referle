@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Header from './Header';
+import Home from './Home';
+import WordBank from './WordBank';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import '../styles/App.css';
 
