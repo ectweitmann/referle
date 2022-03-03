@@ -6,17 +6,17 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import '../styles/App.css';
 
 const App = () => {
-
   return (
     <div className="App">
-      <Header />
+      {/*}<Header />*/}
+      <h1>Hello world</h1>
       <Switch>
         <Route exact path="/" render= { () => <Home /> } />
         <Route exact path="/wordbank" render= { () => <WordBank /> } />
-        <Redirect to='/' />
+        <Redirect to="/" />
       </Switch>
     </div>
-    )
+  );
 }
 
 
