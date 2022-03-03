@@ -8,8 +8,7 @@ import '../styles/App.css';
 const App = () => {
   return (
     <div className="App">
-      {/*}<Header />*/}
-      <h1>Hello world</h1>
+      <Header />
       <Switch>
         <Route exact path="/" render= { () => <Home /> } />
         <Route exact path="/wordbank" render= { () => <WordBank /> } />
