@@ -3,7 +3,7 @@ import WordCard from './WordCard';
 import PageNav from './PageNav'
 import '../styles/WordsContainer.css';
 
-const WordsContainer = ({ words }) => {
+const WordsContainer = ({ words, updateWordBank }) => {
   const wordList = words.map(word => {
     return <WordCard
       key={word.id}
@@ -14,6 +14,7 @@ const WordsContainer = ({ words }) => {
       avgAbsent={word['avg_absent']}
       avgTileScore={word['avg_tile_score']}
       isBookmarked={word.isBookmarked}
+      updateWordBank={updateWordBank}
     />
   })
   return (
