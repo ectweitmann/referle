@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import WordsContainer from './WordsContainer';
+import PageNav from './PageNav';
 import { getDefaultWordList, updateWordsBookmarkedStatus } from '../apiCalls';
 import { cleanData } from '../utils';
-import PageNav from './PageNav';
 import '../styles/Home.css';
 
 class Home extends Component {
@@ -32,10 +32,10 @@ class Home extends Component {
       .then(results => {
         const cleanedResults = cleanData(results);
         return this.setState({
-          words: cleanedResults,
-          previousPage: results.previous ? results.previous.page : null,
-          currentPage: results.current.page,
-          nextPage: results.next ? results.next.page : null,
+          words: cleanedResults.result,
+          previousPage: cleanedResults.previous,
+          currentPage: cleanedResults.current,
+          nextPage: cleanedResults.next,
         });
       })
       .catch(err => this.setState({ error: err.message }));
@@ -47,10 +47,10 @@ class Home extends Component {
       .then(results => {
         const cleanedResults = cleanData(results);
         return this.setState({
-          words: cleanedResults,
-          previousPage: results.previous ? results.previous.page : null,
-          currentPage: results.current.page,
-          nextPage: results.next ? results.next.page : null,
+          words: cleanedResults.result,
+          previousPage: cleanedResults.previous,
+          currentPage: cleanedResults.current,
+          nextPage: cleanedResults.next,
         });
       })
       .catch(err => this.setState({ error: err.message }));
@@ -63,10 +63,10 @@ class Home extends Component {
         .then(results => {
           const cleanedResults = cleanData(results);
           return this.setState({
-            words: cleanedResults,
-            previousPage: results.previous ? results.previous.page : null,
-            currentPage: results.current.page,
-            nextPage: results.next ? results.next.page : null,
+            words: cleanedResults.result,
+            previousPage: cleanedResults.previous,
+            currentPage: cleanedResults.current,
+            nextPage: cleanedResults.next,
           });
         })
         .catch(err => this.setState({ error: err.message }));

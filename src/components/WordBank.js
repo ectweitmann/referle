@@ -32,10 +32,10 @@ class WordBank extends Component {
       .then(results => {
         const cleanedResults = cleanData(results);
         return this.setState({
-          words: cleanedResults,
-          previousPage: results.previous ? results.previous.page : null,
-          currentPage: results.current.page,
-          nextPage: results.next ? results.next.page : null,
+          words: cleanedResults.result,
+          previousPage: cleanedResults.previous,
+          currentPage: cleanedResults.current,
+          nextPage: cleanedResults.next,
         });
       })
       .catch(err => this.setState({ error: err.message }));
@@ -47,10 +47,10 @@ class WordBank extends Component {
       .then(results => {
         const cleanedResults = cleanData(results);
         return this.setState({
-          words: cleanedResults,
-          previousPage: results.previous ? results.previous.page : null,
-          currentPage: results.current.page,
-          nextPage: results.next ? results.next.page : null,
+          words: cleanedResults.result,
+          previousPage: cleanedResults.previous,
+          currentPage: cleanedResults.current,
+          nextPage: cleanedResults.next,
         });
       })
       .catch(err => this.setState({ error: err.message }));
@@ -63,10 +63,10 @@ class WordBank extends Component {
         .then(results => {
           const cleanedResults = cleanData(results);
           return this.setState({
-            words: cleanedResults,
-            previousPage: results.previous ? results.previous.page : null,
-            currentPage: results.current.page,
-            nextPage: results.next ? results.next.page : null,
+            words: cleanedResults.result,
+            previousPage: cleanedResults.previous,
+            currentPage: cleanedResults.current,
+            nextPage: cleanedResults.next,
           });
         })
         .catch(err => this.setState({ error: err.message }));
