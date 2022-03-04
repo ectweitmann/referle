@@ -25,6 +25,20 @@ class Home extends Component {
       .catch(error => this.setState({ error: error.message }));
   }
 
+  changePage = (page) => {
+    getDefaultWordList(page, this.state.limit)
+      .then(response => response.json())
+      .then(results => {
+        return this.setState({
+          words: results.result,
+          previousPage: results.previous ? results.previous.page : null,
+          currentPage: results.current.page,
+          nextPage: results.next ? results.next.page : null,
+        });
+      })
+      .catch(err => this.setState({ error: err.message }));
+  }
+
   componentDidMount = () => {
     getDefaultWordList(this.state.currentPage, this.state.limit)
       .then(response => response.json())
@@ -59,7 +73,12 @@ class Home extends Component {
     return (
       <section className={"Home"}>
         <WordsContainer words={this.state.words} updateWordBank={this.updateWordBank}/>
-        {/* <PageNav pages={this.state.pages} /> */}
+        <PageNav
+          previous={this.state.previousPage}
+          current={this.state.currentPage}
+          next={this.state.nextPage}
+          changePage={this.changePage}
+        />
       </section>
     );
   }
