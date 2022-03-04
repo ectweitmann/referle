@@ -1,5 +1,16 @@
 export const cleanData = (data) => {
-  return data.result.map(word => {
+  const { previous, current, next } = cleanPageData(data.previous, data.current, data.next);
+  const result = cleanWordData(data.result);
+  return {
+    previous: previous,
+    current: current,
+    next: next,
+    result: result
+  }
+}
+
+const cleanWordData = (wordData) => {
+  return wordData.map(word => {
     return {
       guess: word.guess,
       avg_correct: parseFloat(word['avg_correct']).toFixed(3),
@@ -10,4 +21,12 @@ export const cleanData = (data) => {
       isBookmarked: word.isBookmarked
     }
   });
+}
+
+const cleanPageData = (previous, current, next) => {
+  return {
+    previous: previous ? previous.page : null,
+    current: current.page,
+    next: next ? next.page : null
+  }
 }
