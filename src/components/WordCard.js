@@ -1,9 +1,19 @@
 import React from 'react';
 import '../styles/WordCard.css';
 
-const WordCard = ({ id, word, avgCorrect, avgPresent, avgAbsent, avgTileScore, isBookmarked }) => {
+const WordCard = ({
+  id,
+  word,
+  avgCorrect,
+  avgPresent,
+  avgAbsent,
+  avgTileScore,
+  isBookmarked,
+  updateWordBank
+}) => {
+
   return (
-    <section id={`word${id}`} className='word-card'>
+    <section id={id} className={`word-card`} onDoubleClick={() => updateWordBank(id, isBookmarked)}>
       <h2>{word}</h2>
       <section className="word-heurisitcs">
         <section className="word-heurisitics-avgs">
