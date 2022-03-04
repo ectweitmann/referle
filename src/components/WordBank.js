@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import WordsContainer from './WordsContainer';
 import PageNav from './PageNav';
 import { getBookmarkedWords, updateWordsBookmarkedStatus } from '../apiCalls';
+import { cleanData } from '../utils';
 import '../styles/WordBank.css';
 
 class WordBank extends Component {
@@ -29,11 +30,12 @@ class WordBank extends Component {
     getBookmarkedWords(page, this.state.limit)
       .then(response => response.json())
       .then(results => {
+        const cleanedResults = cleanData(results);
         return this.setState({
-          words: results.result,
-          previousPage: results.previous ? results.previous.page : null,
-          currentPage: results.current.page,
-          nextPage: results.next ? results.next.page : null,
+          words: cleanedResults.result,
+          previousPage: cleanedResults.previous,
+          currentPage: cleanedResults.current,
+          nextPage: cleanedResults.next,
         });
       })
       .catch(err => this.setState({ error: err.message }));
@@ -43,11 +45,12 @@ class WordBank extends Component {
     getBookmarkedWords(this.state.currentPage, this.state.limit)
       .then(response => response.json())
       .then(results => {
+        const cleanedResults = cleanData(results);
         return this.setState({
-          words: results.result,
-          previousPage: results.previous ? results.previous.page : null,
-          currentPage: results.current.page,
-          nextPage: results.next ? results.next.page : null,
+          words: cleanedResults.result,
+          previousPage: cleanedResults.previous,
+          currentPage: cleanedResults.current,
+          nextPage: cleanedResults.next,
         });
       })
       .catch(err => this.setState({ error: err.message }));
@@ -58,11 +61,12 @@ class WordBank extends Component {
       getBookmarkedWords(this.state.currentPage, this.state.limit)
         .then(response => response.json())
         .then(results => {
+          const cleanedResults = cleanData(results);
           return this.setState({
-            words: results.result,
-            previousPage: results.previous ? results.previous.page : null,
-            currentPage: results.current.page,
-            nextPage: results.next ? results.next.page : null,
+            words: cleanedResults.result,
+            previousPage: cleanedResults.previous,
+            currentPage: cleanedResults.current,
+            nextPage: cleanedResults.next,
           });
         })
         .catch(err => this.setState({ error: err.message }));
