@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import WordsContainer from './WordsContainer';
-import { getDefaultWordList } from '../apiCalls';
+import { getDefaultWordList, updateWordsBookmarkedStatus } from '../apiCalls';
 import PageNav from './PageNav';
 import '../styles/Home.css';
 
@@ -9,13 +9,20 @@ class Home extends Component {
     super();
     this.state = {
       words: [],
-      bookmarkedWords: [],
+      lastUpdated: '',
       previousPage: null,
       currentPage: 1,
       nextPage: 2,
       limit: 10,
       error: ''
     }
+  }
+
+  updateWordBank = (id, status) => {
+    updateWordsBookmarkedStatus(id, status)
+      .then(response => response.json())
+      .then(updatedWord => this.setState({ lastUpdated: Date.now() }))
+      .catch(error => this.setState({ error: error.message }));
   }
 
   componentDidMount = () => {
@@ -33,7 +40,7 @@ class Home extends Component {
   }
 
   componentDidUpdate = (prevProps, prevState) => {
-    if (this.state.bookmarkedWords.length !== prevState.bookmarkedWords.length) {
+    if (this.state.lastUpdated !== prevState.lastUpdated) {
       getDefaultWordList(this.state.currentPage, this.state.limit)
         .then(response => response.json())
         .then(results => {
@@ -51,7 +58,7 @@ class Home extends Component {
   render = () => {
     return (
       <section className={"Home"}>
-        <WordsContainer words={this.state.words} />
+        <WordsContainer words={this.state.words} updateWordBank={this.updateWordBank}/>
         {/* <PageNav pages={this.state.pages} /> */}
       </section>
     );
