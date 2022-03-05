@@ -76,13 +76,15 @@ class Home extends Component {
   render = () => {
     return (
       <section className={"Home"}>
-        <WordsContainer words={this.state.words} updateWordBank={this.updateWordBank}/>
-        <PageNav
-          previous={this.state.previousPage}
-          current={this.state.currentPage}
-          next={this.state.nextPage}
-          changePage={this.changePage}
-        />
+        <div className="view-container">
+          <WordsContainer words={this.state.words} updateWordBank={this.updateWordBank}/>
+          <PageNav
+            previous={this.state.previousPage}
+            current={this.state.currentPage}
+            next={this.state.nextPage}
+            changePage={this.changePage}
+          />
+        </div>
       </section>
     );
   }

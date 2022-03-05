@@ -13,10 +13,10 @@ const WordCard = ({
 }) => {
 
   return (
-    <section id={id} className={`word-card`} onDoubleClick={() => updateWordBank(id, isBookmarked)}>
+    <section id={id} className='word-card' onDoubleClick={() => updateWordBank(id, isBookmarked)}>
       <h2>{word}</h2>
-      <section className="word-heurisitcs">
-        <section className="word-heurisitics-avgs">
+      <section className="word-heuristics">
+        <section className="word-heuristics-avgs">
           <div>
             <p>🟩 Avg. Correct {avgCorrect}</p>
           </div>
@@ -28,8 +28,8 @@ const WordCard = ({
           </div>
         </section>
         <div className="word-heuristics-tile-score">
-          <p>Avg. Tile Score</p>
-          <p>{avgTileScore}</p>
+          <p className="ats-paragraph">Avg. Tile Score</p>
+          <p className="ats-score">{avgTileScore}</p>
         </div>
       </section>
     </section>

@@ -75,7 +75,8 @@ class WordBank extends Component {
 
   render = () => {
     return (
-      <section className={"WordBank"}>
+      <section className="WordBank">
+      <div className="view-container">
         <WordsContainer words={this.state.words} updateWordBank={this.updateWordBank}/>
         <PageNav
           previous={this.state.previousPage}
@@ -83,6 +84,7 @@ class WordBank extends Component {
           next={this.state.nextPage}
           changePage={this.changePage}
         />
+      </div>
       </section>
     );
   }
