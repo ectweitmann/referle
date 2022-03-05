@@ -1,0 +1,63 @@
+.NavModal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: transparent;
+  justify-content: left;
+  align-items: unset;
+}
+
+.modal-content {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 500px;
+  height: 100%;
+  margin-top: 51px;
+  background: #121213;
+  border: 1px solid #1a1a1b;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  height: 20px;
+}
+
+.close-modal {
+  margin: 0px;
+  line-height: 0.4;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 100px;
+}
+
+span {
+  padding-right: 20px;
+  font-size: 25px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 25px;
+  padding-left: 18px;
+  line-height: 16px;
+  color: white;
+}
+
+@media screen and (min-width: 415px) {
+  .modal-content {
+    width: 375px;
+    height: 180px;
+  }
+}
