@@ -1,11 +1,11 @@
 import React from 'react';
 import '../styles/Header.css';
 
-const Header = () => {
+const Header = ({ toggleNavModal }) => {
   return (
     <section className="Header">
       <div className="hamburger-menu">
-        <p className="hamburger">≡</p>
+        <p className="hamburger" onClick={(event) => toggleNavModal(event)}>≡</p>
       </div>
       <h1 className="referle-title">REFERLE</h1>
       <div className="wordbank-count">
