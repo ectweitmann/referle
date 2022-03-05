@@ -10,7 +10,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      showModal: false
+      showModal: false,
+      error: ''
     }
   }
 
@@ -20,14 +21,18 @@ class App extends Component {
     });
   }
 
+  registerError = (error) => {
+    this.setState({ error: error.message });
+  }
+
   render = () => {
     return (
       <div className="App">
         <Header toggleNavModal={this.toggleNavModal} />
         <NavModal showModal={this.state.showModal} toggleNavModal={this.toggleNavModal} />
         <Switch>
-          <Route exact path="/home" render= { () => <Home /> } />
-          <Route exact path="/wordbank" render= { () => <WordBank /> } />
+          <Route exact path="/home" render= { () => <Home registerError{this.registerError}/> } />
+          <Route exact path="/wordbank" render= { () => <WordBank registerError{this.registerError}/> } />
           <Redirect to="/home" />
         </Switch>
       </div>
