@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import WordsContainer from './WordsContainer';
 import PageNav from './PageNav';
 import { getDefaultWordList, updateWordsBookmarkedStatus } from '../apiCalls';
-import { cleanData } from '../utils';
+import { handleResponse, cleanData } from '../utils';
 import '../styles/Home.css';
 
 class Home extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       words: [],
       lastUpdated: '',
@@ -15,20 +15,19 @@ class Home extends Component {
       currentPage: 1,
       nextPage: 2,
       limit: 10,
-      error: ''
     }
   }
 
   updateWordBank = (id, status) => {
     updateWordsBookmarkedStatus(id, status)
-      .then(response => response.json())
+      .then(response => handleResponse(response))
       .then(updatedWord => this.setState({ lastUpdated: Date.now() }))
-      .catch(error => this.setState({ error: error.message }));
+      .catch(err => this.props.registerError(err));
   }
 
   changePage = (page) => {
     getDefaultWordList(page, this.state.limit)
-      .then(response => response.json())
+      .then(response => handleResponse(response))
       .then(results => {
         const cleanedResults = cleanData(results);
         return this.setState({
@@ -38,12 +37,12 @@ class Home extends Component {
           nextPage: cleanedResults.next,
         });
       })
-      .catch(err => this.setState({ error: err.message }));
+      .catch(err => this.props.registerError(err));
   }
 
   componentDidMount = () => {
     getDefaultWordList(this.state.currentPage, this.state.limit)
-      .then(response => response.json())
+      .then(response => handleResponse(response))
       .then(results => {
         const cleanedResults = cleanData(results);
         return this.setState({
@@ -53,13 +52,13 @@ class Home extends Component {
           nextPage: cleanedResults.next,
         });
       })
-      .catch(err => this.setState({ error: err.message }));
+      .catch(err => this.props.registerError(err));
   }
 
   componentDidUpdate = (prevProps, prevState) => {
     if (this.state.lastUpdated !== prevState.lastUpdated) {
       getDefaultWordList(this.state.currentPage, this.state.limit)
-        .then(response => response.json())
+        .then(response => handleResponse(response))
         .then(results => {
           const cleanedResults = cleanData(results);
           return this.setState({
@@ -69,7 +68,7 @@ class Home extends Component {
             nextPage: cleanedResults.next,
           });
         })
-        .catch(err => this.setState({ error: err.message }));
+        .catch(err => this.props.registerError(err));
     }
   }
 
