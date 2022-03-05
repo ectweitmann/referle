@@ -15,7 +15,6 @@ class WordBank extends Component {
       currentPage: 1,
       nextPage: 2,
       limit: 10,
-      error: ''
     }
   }
 
@@ -23,7 +22,7 @@ class WordBank extends Component {
     updateWordsBookmarkedStatus(id, status)
       .then(response => handleResponse(response))
       .then(updatedWord => this.setState({ lastUpdated: Date.now() }))
-      .catch(error => this.props.registerError(error));
+      .catch(err => this.props.registerError(err));
   }
 
   changePage = (page) => {
@@ -38,7 +37,7 @@ class WordBank extends Component {
           nextPage: cleanedResults.next,
         });
       })
-      .catch(err => this.props.registerError(error));
+      .catch(err => this.props.registerError(err));
   }
 
   componentDidMount = () => {
@@ -53,7 +52,7 @@ class WordBank extends Component {
           nextPage: cleanedResults.next,
         });
       })
-      .catch(err => this.props.registerError(error));
+      .catch(err => this.props.registerError(err));
   }
 
   componentDidUpdate = (prevProps, prevState) => {
@@ -69,7 +68,7 @@ class WordBank extends Component {
             nextPage: cleanedResults.next,
           });
         })
-        .catch(err => this.props.registerError(error));
+        .catch(err => this.props.registerError(err));
     }
   }
 
