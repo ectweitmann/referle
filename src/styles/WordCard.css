@@ -1,0 +1,61 @@
+.word-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #3a3a3c;
+}
+
+.word-heuristics {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.word-heuristics-avgs > div > p {
+  font-size: 12px;
+  line-height: 1.85;
+  margin: 0px;
+}
+
+.word-heuristics-tile-score {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border: 2px solid #538D4E;
+  margin-bottom: 2px;
+}
+
+.ats-paragraph {
+  text-align: center;
+  font-size: x-small;
+  margin: 0px;
+}
+
+.ats-score {
+  font-size: 25px;
+  margin: 0px;
+}
+
+@media screen and (max-width: 414px) {
+  .word-heuristics-avgs > div > p {
+    font-size: 9.5px;
+  }
+
+  .word-heuristics-tile-score {
+    width: 50px;
+    height: 50px;
+  }
+
+  .ats-paragraph {
+    font-size: 8px;
+  }
+
+  .ats-score {
+    font-size: 20px;
+  }
+}
