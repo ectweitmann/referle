@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import WordsContainer from './WordsContainer';
 import PageNav from './PageNav';
 import { getDefaultWordList, updateWordsBookmarkedStatus } from '../apiCalls';
@@ -90,3 +91,7 @@ class Home extends Component {
 }
 
 export default Home;
+
+Home.propTypes = {
+  registerError: PropTypes.func.isRequired
+}
