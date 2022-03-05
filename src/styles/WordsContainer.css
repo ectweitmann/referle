@@ -4,7 +4,13 @@
   grid-gap: 15px;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 349px) {
+  .words-container {
+    grid-template-columns: repeat(1, 200px);
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 414px) {
   .words-container {
     grid-template-columns: repeat(2, 170px);
   }
