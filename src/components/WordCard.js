@@ -12,8 +12,10 @@ const WordCard = ({
   updateWordBank
 }) => {
 
+  const isBookmarkedStyle = isBookmarked ? 'bookmarked' : '';
+
   return (
-    <section id={id} className='word-card' onDoubleClick={() => updateWordBank(id, isBookmarked)}>
+    <section id={id} className={`word-card ${isBookmarkedStyle}`}  onDoubleClick={() => updateWordBank(id, isBookmarked)}>
       <h2>{word}</h2>
       <section className="word-heuristics">
         <section className="word-heuristics-avgs">
