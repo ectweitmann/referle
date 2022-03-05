@@ -5,6 +5,11 @@
   border: 2px solid #3a3a3c;
 }
 
+.bookmarked {
+  background-color: #538D4E;
+  border: none;
+}
+
 .word-heuristics {
   width: 100%;
   display: flex;
