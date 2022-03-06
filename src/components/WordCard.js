@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../styles/WordCard.css';
 
 const WordCard = ({
@@ -39,3 +40,14 @@ const WordCard = ({
 }
 
 export default WordCard;
+
+WordCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  word: PropTypes.string.isRequired,
+  avgCorrect: PropTypes.string.isRequired,
+  avgPresent: PropTypes.string.isRequired,
+  avgAbsent: PropTypes.string.isRequired,
+  avgTileScore: PropTypes.string.isRequired,
+  isBookmarked: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]).isRequired,
+  updateWordBank: PropTypes.func.isRequired
+}
