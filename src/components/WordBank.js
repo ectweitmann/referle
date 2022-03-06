@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import WordsContainer from './WordsContainer';
 import PageNav from './PageNav';
 import { getBookmarkedWords, updateWordsBookmarkedStatus } from '../apiCalls';
@@ -90,3 +91,7 @@ class WordBank extends Component {
 }
 
 export default WordBank;
+
+WordBank.propTypes = {
+  registerError: PropTypes.func.isRequired
+}
