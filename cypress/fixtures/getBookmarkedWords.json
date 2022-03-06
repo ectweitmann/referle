@@ -1,0 +1,29 @@
+{
+  "current": {
+      "page": 1
+  },
+  "result": [
+    {
+      "guess": "ROATE",
+      "avg_correct": "0.5416846652267818",
+      "avg_present": "1.2475161987041037",
+      "avg_absent": "3.2107991360691144",
+      "avg_tile_score": "2.3308855291576673",
+      "guess_pool_shrink": "0.9628182381857188",
+      "solution_pool_shrink": "0.9627754012940304",
+      "id": 9247,
+      "isBookmarked": true
+    },
+    {
+      "guess": "STARE",
+      "avg_correct": "0.5727861771058316",
+      "avg_present": "1.1926565874730022",
+      "avg_absent": "3.2345572354211662",
+      "avg_tile_score": "2.3382289416846653",
+      "guess_pool_shrink": "0.9681710199539264",
+      "solution_pool_shrink": "0.9597007029934368",
+      "id": 10670,
+      "isBookmarked": true
+    }
+  ]
+}
