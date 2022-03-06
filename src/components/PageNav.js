@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../styles/PageNav.css';
 
 const PageNav = ({ previous, current, next, changePage }) => {
@@ -18,3 +19,10 @@ const PageNav = ({ previous, current, next, changePage }) => {
 }
 
 export default PageNav;
+
+PageNav.propTypes = {
+  previous: PropTypes.number,
+  current: PropTypes.number.isRequired,
+  next: PropTypes.number,
+  changePage: PropTypes.func.isRequired
+}
