@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import '../styles/PageNav.css';
 
 const PageNav = ({ previous, current, next, changePage }) => {
-  const handleClickPrev = previous ? changePage : () => {};
-  const handleClickNext = next ? changePage : () => {};
+  const displayPrevious = previous ? '' : 'not-visible';
+  const displayNext = next ? '' : 'not-visible';
   return (
     <section className="page-nav">
       <div>
-        <p onClick={() => handleClickPrev(previous)}>‹ Prev.</p>
+        <p className={`${displayPrevious}`} onClick={() => changePage(previous)}>‹ Prev.</p>
         <div className="page">
           <p className="page-number">{current}</p>
         </div>
-        <p onClick={() => handleClickNext(next)}>Next ›</p>
+        <p className={`${displayNext}`} onClick={() => changePage(next)}>Next ›</p>
       </div>
     </section>
   );
