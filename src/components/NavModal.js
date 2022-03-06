@@ -16,10 +16,10 @@ const NavModal = ({ showModal, toggleNavModal }) => {
         </section>
         <section className="modal-body">
           <Link to="/home" className="nav-link" onClick={() => toggleNavModal()}>
-            <span>➤</span>Home
+            <span className="modal-arrow">➤</span>Home
           </Link>
           <Link to="/wordbank" className="nav-link" onClick={() => toggleNavModal()}>
-            <span>➤</span>Word Bank
+            <span className="modal-arrow">➤</span>Word Bank
           </Link>
         </section>
       </div>

@@ -74,9 +74,15 @@ class WordBank extends Component {
   }
 
   render = () => {
+    let displayEmptyMessage = null;
+    if (!this.state.words.length) {
+      displayEmptyMessage = <h2 className="empty-message">Your Word Bank is empty. <span className="green">Double tap</span> on word cards to add them to your Word Bank!</h2>;
+    }
+
     return (
       <section className="WordBank">
       <div className="view-container">
+        {displayEmptyMessage}
         <WordsContainer words={this.state.words} updateWordBank={this.updateWordBank}/>
         <PageNav
           previous={this.state.previousPage}
