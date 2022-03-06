@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import WordCard from './WordCard';
-import PageNav from './PageNav'
 import '../styles/WordsContainer.css';
 
 const WordsContainer = ({ words, updateWordBank }) => {

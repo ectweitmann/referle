@@ -19,6 +19,18 @@
   padding-top: 15px;
 }
 
+.empty-message {
+  font-size: x-large;
+  text-align: center;
+}
+
+.green {
+  text-decoration: underline;
+  text-decoration-color: #538D4E;
+  text-decoration-style: double;
+  padding: none;
+}
+
 @media screen and (max-width: 414px) {
   .WordBank {
     width: 320px;
