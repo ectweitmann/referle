@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import '../styles/NavModal.css';
 
@@ -27,3 +28,8 @@ const NavModal = ({ showModal, toggleNavModal }) => {
 }
 
 export default NavModal;
+
+NavModal.propTypes = {
+  showModal: PropTypes.bool.isRequired,
+  toggleNavModal: PropTypes.func.isRequired
+}

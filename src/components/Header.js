@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../styles/Header.css';
 
 const Header = ({ toggleNavModal }) => {
@@ -16,3 +17,7 @@ const Header = ({ toggleNavModal }) => {
 }
 
 export default Header;
+
+Header.propTypes = {
+  toggleNavModal: PropTypes.func.isRequired
+}
