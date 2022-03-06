@@ -20,6 +20,9 @@ class WordBank extends Component {
   }
 
   updateWordBank = (id, status) => {
+    if (this.state.words.length === 1 && this.state.current !== 1) {
+      this.changePage(this.state.previousPage || 1);
+    }
     updateWordsBookmarkedStatus(id, status)
       .then(response => handleResponse(response))
       .then(updatedWord => this.setState({ lastUpdated: Date.now() }))
