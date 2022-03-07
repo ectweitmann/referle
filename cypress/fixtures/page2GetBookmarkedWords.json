@@ -1,0 +1,22 @@
+{
+  "previous": {
+      "page": 1,
+      "limit": 10
+  },
+  "current": {
+      "page": 2
+  },
+  "result": [
+    {
+      "guess": "STARE",
+      "avg_correct": "0.5727861771058316",
+      "avg_present": "1.1926565874730022",
+      "avg_absent": "3.2345572354211662",
+      "avg_tile_score": "2.3382289416846653",
+      "guess_pool_shrink": "0.9681710199539264",
+      "solution_pool_shrink": "0.9597007029934368",
+      "id": 10670,
+      "isBookmarked": true
+    }
+  ]
+}

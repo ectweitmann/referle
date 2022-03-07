@@ -8,17 +8,6 @@
   },
   "result": [
     {
-      "guess": "ARISE",
-      "avg_correct": "0.5481641468682505",
-      "avg_present": "1.2086393088552916",
-      "avg_absent": "3.243196544276458",
-      "avg_tile_score": "2.3049676025917925",
-      "guess_pool_shrink": "0.9676924014441473",
-      "solution_pool_shrink": "0.9612876861859688",
-      "id": 533,
-      "isBookmarked": true
-    },
-    {
       "guess": "AROSE",
       "avg_correct": "0.5386609071274298",
       "avg_present": "1.2293736501079913",
