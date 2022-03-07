@@ -9,9 +9,7 @@ const Header = ({ toggleNavModal }) => {
         <p className="hamburger" onClick={(event) => toggleNavModal(event)}>≡</p>
       </div>
       <h1 className="referle-title">REFERLE</h1>
-      <div className="wordbank-count">
-        <p className="count">0</p>
-      </div>
+      <div className="wordbank-count"></div>
     </section>
   );
 }
