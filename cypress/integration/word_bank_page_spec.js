@@ -88,4 +88,16 @@ describe('Referle Word Bank Page', () => {
       expect(location.href).to.eq('http://localhost:3000/home')
     }));
   });
+
+  it('should be met with a helpful message when Word Bank is empty', () => {
+    cy.intercept('https://referle.herokuapp.com/api/v1/heuristics/bookmarked?page=1&limit=10', {
+      "current": {
+          "page": 1
+      },
+      "result": []
+    }).as('emptyWordBank')
+    cy.reload();
+    cy.wait(['@emptyWordBank']);
+    cy.get('.empty-message').contains('Your Word Bank is empty. Double tap on word cards to add them to your Word Bank!');
+  });
 });
