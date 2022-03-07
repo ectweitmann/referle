@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Referle
+
+A companion app for the word game [Wordle](https://www.nytco.com/press/wordle-new-york-times-games/). Provides users a list of possible words to guess, ranked by their average tile score. When a user finds a word they like, they can add it to the Word Bank by double tapping the word card.
+
+Deployed Application here: [Referle](https://referle-2110.herokuapp.com/home)
+
+# Table of Contents
+
+1. [Overview](#overview)
+2. [Installation Instructions](#installationInstructions)
+3. [Project Goals](#projectGoals)
+4. [Directions and Features](#directions)
+5. [Technologies Used](#techUsed)
+6. [Testing](#testing)
+7. [Project Wins](#projectWins)
+8. [Future Iterations](#futureIterations)
+9. [Authors](#authors)
+
+## Overview <a name="overview"></a>
+
+Referle is my Mod 3 final project for the Turing School of Software and Design that was built with `create-react-app` and tested using Cypress. I sourced the data for the backend from [this repo](https://github.com/sejaldua/wordle-analysis) I found. The project was completed over 6 days beginning with ideation and [wire framing](https://miro.com/app/board/uXjVOJbBisQ=/) and concluding with deployement on Heroku.
+
+- Project Spec here: [Showcase](https://frontend.turing.edu/projects/module-3/showcase.html)
+- Referle API:
+    - GitHub: [Referle API](https://github.com/ectweitmann/referle-api)
+    - Heroku: [Referle API](https://referle.herokuapp.com/)
+
+
+## Installation Instructions <a name="installationInstructions"></a>
+
+1. Clone down [this repository](https://github.com/ectweitmann/referle)
+2. Run `npm install`
+3. Run `npm start` in your terminal
+4. Go to http://localhost:3000/ and you should see the website
+5. Enter `control + c` in your terminal to stop the server at any time.
+
+## Project Goals <a name="projectGoals"></a>
+
+1. Use the technology I've been working with over the course of the module to demonstrate mastery of the following:
+  - React
+  - Router
+  - Asynchronous JavaScript
+  - End to end testing with Cypress
+2. Create personas and user stories to describe your target audience.
+
+3. Work within constraints to deliver a product for your niche audience, which helps solve a problem unique to them.
+
+## Directions and Features <a name="directions"></a>
+
+Scroll through the home page to view all books in the database. Each books's cover, title and author are visible.
+
+![main_page_view](https://media.giphy.com/media/7Q9UX06Z6FbB40wdEP/giphy.gif)
+
+Click on the 'Learn More' button next to a book cover that interests you to view a book's details. On this page a description of the book's plot is presented. The user is also given the ability to add to or remove a book from their favorites as well as the option to buy the book on Amazon. They can view all of their favorited books by clicking the "Your favorites" button at the top right of the page. Click the book club logo at the top left of the page to return to the main page.
+
+![favorite-unfavorite-book](https://media.giphy.com/media/m2txGQ1Ikbi4EJ9k5L/giphy.gif)
+
+## Technologies Used <a name="techUsed"></a>
+### Frontend Technologies
+- React
+- React Router
+- Javascript
+- CSS3
+- HTML5
+- Fetch API
+- PropTypes
+- NPM
+- Cypress
+
+### Backend Technologies
+
+- Express
+- Node.js
+- Postman
+
+## Testing <a name="testing"></a>
+
+Cypress was used for E2E and integration testing. To test the application: run `npm run cypress` and you will have a window open that gives you the ability to click on each test and see whether they pass. Make sure you've run `npm start` in a separate terminal tab before you begin the testing.
+
+## Project Wins <a name="projectWins"></a>
+
+- Produce a fully functional MVP within the time scope of 6 days
+- Successfully built a paginated API by self-teaching Express.
+- Constructed a thorough project plan and wireframe, and then executed it.
+- Implemented React Router for a multi-page UX
+- Continued to gain competency with Cypress E2E testing framework
+- Utilized typechecking with PropTypes
+
+## Future Iterations <a name="futureIterations"></a>
+
+- Searching functionality, so a user can search for words based on a specified criteria.
+- Add functionality for different user profiles (login page)
+- A Light mode.
+
+## Authors
+
+- [Ethan Tweitmann](https://github.com/ectweitmann)
+
+- Project Manager: [Robbie Jaeger](https://github.com/robbiejaeger)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
