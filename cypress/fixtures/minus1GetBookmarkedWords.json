@@ -1,0 +1,110 @@
+{
+  "current": {
+      "page": 1
+  },
+  "next": {
+      "page": 2,
+      "limit": 10
+  },
+  "result": [
+    {
+      "guess": "AROSE",
+      "avg_correct": "0.5386609071274298",
+      "avg_present": "1.2293736501079913",
+      "avg_absent": "3.231965442764579",
+      "avg_tile_score": "2.306695464362851",
+      "guess_pool_shrink": "0.967609784556736",
+      "solution_pool_shrink": "0.9605370179456916",
+      "id": 549,
+      "isBookmarked": true
+    },
+    {
+      "guess": "ORATE",
+      "avg_correct": "0.5088552915766739",
+      "avg_present": "1.2803455723542116",
+      "avg_absent": "3.2107991360691144",
+      "avg_tile_score": "2.2980561555075596",
+      "guess_pool_shrink": "0.9618569718862824",
+      "solution_pool_shrink": "0.9616319523811746",
+      "id": 7778,
+      "isBookmarked": true
+    },
+    {
+      "guess": "RAILE",
+      "avg_correct": "0.5447084233261339",
+      "avg_present": "1.2250539956803457",
+      "avg_absent": "3.2302375809935207",
+      "avg_tile_score": "2.3144708423326135",
+      "guess_pool_shrink": "0.9619335282039602",
+      "solution_pool_shrink": "0.9620336895726528",
+      "id": 8853,
+      "isBookmarked": true
+    },
+    {
+      "guess": "RAISE",
+      "avg_correct": "0.5485961123110151",
+      "avg_present": "1.208207343412527",
+      "avg_absent": "3.243196544276458",
+      "avg_tile_score": "2.305399568034557",
+      "guess_pool_shrink": "0.9684624600984744",
+      "solution_pool_shrink": "0.9622898833320116",
+      "id": 8859,
+      "isBookmarked": true
+    },
+    {
+      "guess": "ROATE",
+      "avg_correct": "0.5416846652267818",
+      "avg_present": "1.2475161987041037",
+      "avg_absent": "3.2107991360691144",
+      "avg_tile_score": "2.3308855291576673",
+      "guess_pool_shrink": "0.9628182381857188",
+      "solution_pool_shrink": "0.9627754012940304",
+      "id": 9247,
+      "isBookmarked": true
+    },
+    {
+      "guess": "SAINE",
+      "avg_correct": "0.6660907127429806",
+      "avg_present": "0.9667386609071275",
+      "avg_absent": "3.367170626349892",
+      "avg_tile_score": "2.2989200863930885",
+      "guess_pool_shrink": "0.964566879053006",
+      "solution_pool_shrink": "0.9549173621185898",
+      "id": 9486,
+      "isBookmarked": true
+    },
+    {
+      "guess": "SANER",
+      "avg_correct": "0.578401727861771",
+      "avg_present": "1.1365010799136068",
+      "avg_absent": "3.285097192224622",
+      "avg_tile_score": "2.293304535637149",
+      "guess_pool_shrink": "0.9657895490469921",
+      "solution_pool_shrink": "0.9586772341150076",
+      "id": 9540,
+      "isBookmarked": true
+    },
+    {
+      "guess": "SLATE",
+      "avg_correct": "0.6207343412526998",
+      "avg_present": "1.0630669546436284",
+      "avg_absent": "3.316198704103672",
+      "avg_tile_score": "2.304535637149028",
+      "guess_pool_shrink": "0.9660881819556192",
+      "solution_pool_shrink": "0.9573878685817444",
+      "id": 10184,
+      "isBookmarked": true
+    },
+    {
+      "guess": "SOARE",
+      "avg_correct": "0.6600431965442765",
+      "avg_present": "1.1079913606911447",
+      "avg_absent": "3.231965442764579",
+      "avg_tile_score": "2.428077753779698",
+      "guess_pool_shrink": "0.9706479281842468",
+      "solution_pool_shrink": "0.9617672331353879",
+      "id": 10364,
+      "isBookmarked": true
+    }
+  ]
+}
