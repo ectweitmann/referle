@@ -29,10 +29,13 @@
 }
 
 .close-modal {
+  color: white;
   margin: 0px;
   line-height: 0.4;
   font-size: 25px;
   cursor: pointer;
+  background: transparent;
+  border: none;
 }
 
 .modal-body {
@@ -53,7 +56,12 @@
   font-size: 25px;
   padding-left: 18px;
   line-height: 16px;
-  color: white;
+  color: inherit;
+}
+
+.light-mode {
+  color: black;
+  background: white;
 }
 
 @media screen and (min-width: 415px) {

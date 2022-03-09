@@ -22,22 +22,27 @@
   align-items: center;
 }
 
-.wordbank-count {
+.theme-container {
   background-color: transparent;
 }
 
-.count,
-.hamburger {
-  font-size: 16px;
-  color: white;
-  margin: 0px;
+.theme-icon {
+  font-size: 30px;
+  cursor: pointer;
 }
 
-.count {
-  font-weight: bold;
+.hamburger {
+  font-size: 16px;
+  margin: 0px;
 }
 
 .hamburger {
   font-size: 40px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 414px) {
+  .theme-icon {
+    font-size: 40px;
+  }
 }
