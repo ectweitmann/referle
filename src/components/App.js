@@ -12,7 +12,6 @@ class App extends Component {
     super();
     this.state = {
       showModal: false,
-      inDarkMode: true,
       error: ''
     }
   }
@@ -23,21 +22,16 @@ class App extends Component {
     });
   }
 
-  toggleDarkMode = () => {
-    this.setState({ inDarkMode: !this.state.inDarkMode });
-  }
-
   registerError = (error) => {
     this.setState({ error: error.message });
   }
 
   render = () => {
     const errorModal = this.state.error ? <ErrorModal error={this.state.error} /> : null;
-    const lightMode = this.state.inDarkMode ? '' : 'light-mode';
     return (
-      <div className={`App ${lightMode}`}>
-        <Header toggleNavModal={this.toggleNavModal} toggleDarkMode={this.toggleDarkMode} />
-        <NavModal showModal={this.state.showModal} toggleNavModal={this.toggleNavModal} inDarkMode={this.state.inDarkMode} />
+      <div className="App">
+        <Header toggleNavModal={this.toggleNavModal} />
+        <NavModal showModal={this.state.showModal} toggleNavModal={this.toggleNavModal} />
         <Switch>
           <Route exact path="/home" render= { () => <Home registerError={this.registerError}/> } />
           <Route exact path="/wordbank" render= { () => <WordBank registerError={this.registerError}/> } />

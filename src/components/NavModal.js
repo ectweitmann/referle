@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import '../styles/NavModal.css';
 
-const NavModal = ({ showModal, toggleNavModal, inDarkMode }) => {
+const NavModal = ({ showModal, toggleNavModal }) => {
   if (!showModal) {
     return null;
   }
-  const lightMode = inDarkMode ? '' : 'light-mode';
+
   return (
     <div className="NavModal" onClick={() => toggleNavModal()}>
-      <div className={`modal-content ${lightMode}`} onClick={event => event.stopPropagation()}>
+      <div className="modal-content" onClick={event => event.stopPropagation()}>
         <section className="modal-header">
-          <button className={`close-modal ${lightMode}`} onClick={() => toggleNavModal()}>×</button>
+          <a className="close-modal" onClick={() => toggleNavModal()}>×</a>
         </section>
         <section className="modal-body">
           <Link to="/home" className="nav-link" onClick={() => toggleNavModal()}>

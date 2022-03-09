@@ -81,7 +81,7 @@ Cypress was used for E2E and integration testing. To test the application: run `
 
 - Searching functionality, so a user can search for words based on a specified criteria.
 - Add functionality for different user profiles.
-- ~~A Light/Dark mode toggling.~~ (**Added as of 3/9/2022**)
+- A Light/Dark mode toggling.
 
 ## Authors
 

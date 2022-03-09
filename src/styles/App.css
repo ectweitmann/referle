@@ -1,19 +1,4 @@
 .App {
+  height: calc(100% - 50px);
   min-width: 320px;
-  background-color: #121213;
-  color: white;
-  overflow-y: scroll;
-  transition: background-color 0.35s ease, color 0.35s ease;
-}
-
-.light-mode {
-  color: black;
-  background-color: white;
-  transition: background-color 0.35s ease, color 0.35s ease;
-}
-
-@media screen and (min-height: 905px) {
-  .App {
-    height: 100%;
-  }
 }
