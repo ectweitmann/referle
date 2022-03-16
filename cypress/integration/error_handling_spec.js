@@ -2,7 +2,7 @@ describe('Referle Error Handling', () => {
   it('should be met with error modal if patch request is sent with invalid id', () => {
     cy.viewport('iphone-xr');
     cy.intercept('https://referle.herokuapp.com/api/v1/heuristics/sorted/avg_tile_score?page=1&limit=10', { fixture: 'defaultSortedGetResult' }).as('defaultGet');
-    cy.intercept('PATCH', 'https://referle.herokuapp.com/api/v1/heuristics/ffffff', {
+    cy.intercept('PATCH', 'https://referle.herokuapp.com/api/v1/heuristics/10364', {
       statusCode: 404,
     }).as('patchRequest');
 
