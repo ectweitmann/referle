@@ -12,7 +12,7 @@ const NavModal = ({ showModal, toggleNavModal }) => {
     <div className="NavModal" onClick={() => toggleNavModal()}>
       <div className="modal-content" onClick={event => event.stopPropagation()}>
         <section className="modal-header">
-          <a className="close-modal" onClick={() => toggleNavModal()}>×</a>
+          <button className="close-modal" onClick={() => toggleNavModal()}>×</button>
         </section>
         <section className="modal-body">
           <Link to="/home" className="nav-link" onClick={() => toggleNavModal()}>
